@@ -1,0 +1,352 @@
+%%% RESUME Library                      Created by KMP@MC -- Feb/Mar 1980
+%%%    Converted for TEX from TEX80 by PARKER@OZ and MARC@OZ -- June 1985 
+%%%       Extended with NEWSECTION by MARKUS@OZ and PARKER@OZ -- Jan 1986 
+%%%
+%%% Please notify PARKER@OZ of any changes to this file.
+%%%
+%%% This is a library for creating cookbook resumes. Everything is here.
+%%% All you add are the lies about yourself.
+%%%
+%%% For a sample usage, see the file TEXLOCAL:RESUME-SAMPLE.TEX
+%%% See the file TEXLOCAL:RESUME.CONVERSION for information on
+%%%   converting your old TeX resume to run under the new system.
+%%%
+%%% Note:  Currently you must run TeX using this package by doing:
+%%%                @TEXTR <resume filename>
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% If things go wrong using this file, here are some common problems.
+%%% If all else fails, send me (PARKER@OZ) mail and maybe we can fix it.
+%%%
+%%% Debugging help:
+%%%                ******THIS IS CRITICAL*******
+%%%  -- look at arglist, esp. for twocol, split, and newsection.  If there is a
+%%%     space between the args (such as #1 and #2), then there must be
+%%%     one in the source.
+%%%                ******END CRITICAL SECTION****
+%%%  -- if you get black vertical bars on your output, that means that
+%%%     a line was overfull.  Often the reason for this is the
+%%%     width of the page (pagewidth) is not big enough to contain
+%%%     both the section label and the value you specified for
+%%%     textwidth.  Adjust these numbers and all should work.
+%%%     Be sure that if you have a big label name, you use twoline
+%%%     to split it to two lines.
+%%%  -- if you get a vertical overfull box problem and you have a one-line
+%%%     objective, you will need to put \vskip .125in
+%%%     in the format section at the end of your resume just after the
+%%%     line \objective and just before the next one.  You may still
+%%%     get a warning from TeX about this box, but you will not have
+%%%     any crowding on your output.
+%%%     A possibly easier way of doing this is to make your objective
+%%%     look like this:
+%%%     \defsection{\objective}{\twoline {Employment}{Objective}}
+%%%         {\text {This is my short objective.}
+%%%         \text { }}
+%%%     This blank text box will fake TeX into giving you the space you
+%%%     need AND you won't get any warnings.
+%%%  -- If you get font problems, try using the defaults and running
+%%%     TeX using TEXTR, which uses the Times Roman font family.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% System implementor's message.
+\message{Please read the file TEXLOCAL:RESUME.TEX if you have problems.}
+\message{Note:  Currently there are bugs w.r.t. output to QMS.}
+
+%%% Define system parameters 
+
+\rm                     % Roman character set default type face
+\hsize=36pc             % Page width = 36 picas  ( 6 in )
+\vsize=45pc             % Page height = 45 picas ( 7-1/2 in )
+\nopagenumbers          % Flush page nos.
+\parindent=0pt          % Flush indenting of paragraphs.
+                        % Can be turned on locally if psyched to use it.
+
+%% Used in old TeX, but not needed here.
+%% \output{\page}               % Just output page with no special headings, etc  
+
+%% For now, at least as best I can tell from the point macros in TEXTR,
+%% small capitals aren't going to work, so just make them do something safe.
+\def\sc #1{\rm #1}
+
+
+%%% Define macros used internally
+
+
+\newdimen\rwid          %%   Width of the right box (text) is 28pc ( 4-2/3 in ) 
+\rwid=28pc
+
+%%% These commands may be used to enter a given typeface.
+%%%
+%%%   \roman{... stuff to put in roman ...}
+%%%   \bold{... stuff to put in bold ...}
+%%%   \italic{... stuff to put in italic ...}
+
+\def\roman#1{{\rm #1}}
+\def\bold#1{{\bf #1}}
+\def\italic#1{{\it #1}}
+
+
+%%% These macros are provided for users who wish to change the various
+%%% width and height parameters used by this package.
+%%%
+%%% \textwidth  size
+%%% \pagewidth  size
+%%% \pagelength size
+
+\def\textwidth  #1{\rwid=#1}
+\def\pagewidth  #1{\hsize#1}
+\def\pagelength #1{\vsize#1}
+
+
+%%%  Added by PARKER 6/85 to facilitate columnarizing of courses.
+%%%
+%%%  Usage:  \twocol{Foo Chemistry}{Bar Mathematics}
+%%%
+
+\def\twocol#1#2{\hbox to \rwid{\ourtextfont\hbox to 13.5pc{#1\hfill}
+    \hfill\hbox to 13.5pc{#2\hfill}}}
+
+%%% Commands for setting fonts. 'fontcmd' refers to a normal TeX font
+%%%  affecting command such as \bf or \tenpoint.
+%%%
+%%% The font of text defined with \defname
+%%%   \defnamefont{fontcmd} sets the font to be used for your name
+%%%   \namefont changes to that font
+%%%
+%%% For varying the font of text in a \defsection
+%%%   \defheaderfont{fontcmd} sets the font to be used for section headers
+%%%   \headerfont changes to that font
+%%%
+%%% For varying the font of text in a \defaddress
+%%%   \defaddressfont{fontcmd} sets the font to be used in the address
+%%%   \addressfont changes to that font
+%%%
+%%% For varying the font of text in a \split
+%%%   \deflsplitfont{fontcmd} sets the font to be used on the left of a split
+%%%   \rsplitfont changes to that font
+%%%   \defrsplitfont{fontcmd} sets the font to be used on the right of a split
+%%%   \lsplitfont changes to that font
+%%%
+%%% For varying the font of text in a \text
+%%%   \defourtextfont{fontcmd} is the font to be used in the main text area
+%%%   \ourtextfont changes to that font
+
+\def\namefont{\twelvepoint\bf}             % used to be HV14B
+\def\defnamefont#1{\def\namefont{#1}}
+
+\def\headerfont{\twelvepoint\bf}           % used to be HV12B
+\def\defheaderfont#1{\def\headerfont{#1}}
+
+\def\labelfont{\tenpoint\bf}
+\def\deflabelfont#1{\def\labelfont{#1}}
+
+\def\lsplitfont{\tenpoint\bf}
+\def\deflsplitfont#1{\def\lsplitfont{#1}}
+
+\def\rsplitfont{\ninepoint\rm}
+\def\defrsplitfont#1{\def\rsplitfont{#1}}
+
+\def\ourtextfont{\tenpoint\rm}              % was 9pt, but was losing...RP 6/30/85 17:58:20
+\def\deftextfont#1{\def\ourtextfont{#1}}
+
+\def\addressfont{\ninepoint\rm}
+\def\defaddressfont#1{\def\addressfont{#1}}
+
+
+%%% \skip  -- inserts a gap between lines
+%%% \space -- inserts whitespace between horizontal text blocks
+
+\def\skip{\par\vskip 6pt}
+\def\space{\hfill}
+
+%%% \defname{yournamegoeshere}
+%%%
+%%% You must declare the name to go at the top of the form using this
+%%% macro. 
+
+\def\defname#1{\gdef\name{\hbox to \hsize{\namefont\hfill #1\hfill}\par
+                            \vskip 8pt}}
+
+%%% \defaddress{\macroname}{addressname}{...specs...}
+%%%   specs may include
+%%%   \street{...street address...}     %% Required
+%%%   \apt{apartment or room info}      %% Optional
+%%%   \city{cityname, statename}        %% Required
+%%%   \zip{02139}                       %% Optional
+%%%   \phone{(617) 253-6765}            %% Optional
+%%%
+%%% This defines an address box. They must appear in the specified order.
+%%% If required specs are not given, results may be unpredictable.
+%%% Any number of addressses may be defined---if you think they'll fit.
+%%% The format for how they get laid out is specified in the \format 
+%%% command farther down.
+
+\def\defaddress#1#2#3{
+    \gdef#1{{\def\stext{} \def\ctext{} \def\ztext{} \def\atext{}
+             \def\qtext{\hbox{ }} \def\ptext{\hbox{ }}
+             \def\street####1{\def\stext{####1}}
+             \def\apt####1{\def\atext{\hbox{####1} \def\qtext{}}}
+             \def\city####1{\def\ctext{####1}}
+             \def\zip####1{\def\ztext{####1}}
+             \def\phone####1{\def\ptext{####1}}
+             #3
+             \addressfont\vbox{\hbox{\bf #2 Address}  %%% used to have $\!$
+                               %%
+                               %% These next two lines used to be in the
+                               %% other order [street then apt] but, as
+                               %% pointed out by SR.WILSON@SPEECH, the
+                               %% US Postal Service recommend an ordering
+                               %% of information based on specificness.
+                               %% If this change upsets you, simply
+                               %% copy this \def into the beginning
+                               %% of your resume file (after the \input)
+                               %% and reverse them there. --RP 4/86
+                               \atext
+                               \hbox{\stext}
+                               \hbox{\ctext\quad \ztext}
+                               \hbox{\ptext}
+                               \qtext}}}}
+
+
+%%% \defsection{macroname}{sectionname}
+%%%     {main text of section}
+%%%
+%%% This macro allows you to define a macro named macroname which can be
+%%% called later and which will produce a box which looks like
+%%%
+%%%    sectionname ... text ........
+%%%                ... more text ...
+%%%                ... etc .........
+%%%
+%%% The text of section must be constructed in turn by the use of either
+%%% of two special operators.
+%%%
+%%% \text{...}          means that the text in the box is to be set as a 
+%%%                     normal paragraph
+%%%
+%%% \split{...} {...}   means that the two boxes are to be set on a single
+%%%                     line separated by whitespace. The first box is in
+%%%                     9pt bold by default, the second is 8pt roman.
+%%%
+%%% A sample section definition looks like:
+%%%
+%%% \defsection{\education} {Education}
+%%%   {\split{Massachusetts Institute of Technology} {Cambridge, MA}
+%%%    \text {Got a Bachelor of Science in Humanities. Didn't learn much.}
+%%%    \space
+%%%    \split{Foo High School}                       {NoWhere, USA}
+%%%    \text {I didn't really graduate from high school. I just kinda
+%%%           gave up after a while and took up kollidge.}}
+%%%
+
+\def\defsection#1#2 #3
+   {\gdef#1{\headerfont
+            \setbox1=\hbox{\hsize \rwid\vbox{#3\par\vskip 10pt}}
+            \hbox to \hsize{\vbox to 1\ht1{\hbox{#2}\vfil}
+                            \hfil
+                            \box1}}}
+
+%%% NEWSECTION -- allows you to produce output with year labels, for instance,
+%%%    to the right of each of your jobs.  An alternative to putting the
+%%%    year information inside the job description.               
+%%% 
+%%% This NEWSECTION by Markus Toth (MARKUS@OZ).
+%%%
+%%% Example of what the source code should look like:
+%%%
+%%%\defnewsection{\work}{Experience}
+%%%   {\skip
+%%%    \seclayer{\twoline {1985 to} {Present}}
+%%%       {\split{Company A, Inc.}              {Nowhere, MA}
+%%%        \text {As director of food consumption....}}
+%%%    \skip
+%%%    \seclayer{\twoline {1982 to} {1985}}
+%%%       {\split{Company B, Ltd.}              {Somewhere, MA}
+%%%        \text {Associate Research Scientist.  ....}}
+%%%    \vskip 0pt}}   %% THIS MUST BE HERE
+%%%
+%%% And here is the output produced by that:
+%%%
+%%% Experience
+%%%
+%%% 1985 to          Company A, Inc                Nowhere, MA
+%%% Present          As director of food consumption...
+%%%
+%%% 1982 to          Company B, Ltd.               Somewhere, MA
+%%% 1985             Associate Research Scientist.  ....
+%%%
+%%% Note that the \vskip 0pt at the end of \defnewsection is CRITICAL.
+%%% Yes, this is a bug, and no we aren't going to fix it now.
+%%% And, yes, you are welcome to fix it iff you know how.
+
+\def\defnewsection#1#2 #3
+   {\gdef#1{\headerfont
+            \hbox to \hsize{#2 \hfil}
+            #3}}
+
+%%% SECLAYER -- each layer (i.e. each job) needs to be in one of these.
+%%%
+%%% Note that it uses LABELFONT for the labels.  You can define labelfont
+%%% with \deflabelfont{\tenpoint\bf} or whatever.
+
+\def\seclayer#1 #2
+   {\labelfont
+    \setbox1=\hbox{\hsize \rwid\vbox{#2\par\vskip 10pt}}
+    \hbox to \hsize{\vbox to 1\ht1{\hbox{#1}\vfil}
+                    \hfil
+                    \box1}}
+
+
+%%% \oneline{text}               - a no-op
+%%% \twoline{text}{text}         - creates a two-line box
+%%% \threeline{text}{text}{text} - creates a three-line box
+%%%
+%%% These are for trivially creating one, two, or three line boxes for the
+%%% label field in the main body.
+
+\def\oneline#1{#1}
+\def\twoline#1#2{\vbox{\hbox{#1}\hbox{#2}}}
+\def\threeline#1#2#3{\vbox{\hbox{#1}\hbox{#2}\hbox{#3}}}
+
+
+
+%%% \format{addresslist}
+%%%        {bodylist}
+%%%
+%%% This is what defines how things get laid out. Just list out your 
+%%% address names (separate them with a \space) and your section names 
+%%% in the order you want them to appear. eg,
+%%%
+%%%  \format{\home\space\work\space\permanent}
+%%%         {\objective\skip\education\skip\background}
+%%%
+%%% This will define a \copy and that will make it get output. You may
+%%% change fonts, etc, between doing \copy's and the changes will affect
+%%% subsequent \copy commands. You'll need to supply your own \bye at 
+%%% the end of the file.
+
+\def\format #1 #2{
+ \count0=0
+ \gdef\copy{\global\advance\count0 by 1
+ {\def\split####1 ####2{\hbox to\rwid{\lsplitfont ####1\hfill\rsplitfont ####2}}
+  \def\text####1{\hbox {\hsize \rwid \vbox{\ourtextfont ####1}}}
+  \hbox{$ $}\par\vfill\name\vfill\hbox to \hsize{#1}\par\vfill
+  #2\par\vfill\eject}}}
+
+%% \def\format #1 #2{
+%% \setcount0 0
+%% \gdef\copy{\advcount0
+%% {\def\split####1 ####2{\hbox to \rwid{\lsplitfont ####1\hfill\rsplitfont ####2}}
+%%  \def\text####1{\hbox par \rwid{\textfont ####1}}
+%%  \hbox{$ $}\par\vfill\name\vfill\hbox to size {#1}\par\vfill
+%%  #2\par\vfill\eject}}}
+
+
+% Local Modes:
+% MM AutoTeX Mode:1,m.mTex Mode"e m(m.m Load Library)TeX'w
+% Mode:AutoTeX
+% Comment Column:40
+% Comment Start:%
+% Atom Word Mode:0
+% Auto Fill Mode:0
+% End:
