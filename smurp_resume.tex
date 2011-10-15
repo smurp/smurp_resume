@@ -48,12 +48,12 @@ He is fluent in diverse programming languages, knowledge
 representation technologies, frameworks, visualization tools, RDBMSes,
 ORMs, APIs, standards, methodologies and architectural styles. 
 Examples of his work include:
-  a publishing automation system for YellowPage-sized real estate directories;
-  real-estate systems featuring geodata and powered by his own RETS implementation; 
+  a custom database publishing system used by the largest real estate
+    markets in Western Canada;
+  real-estate systems powered by his own RETS implementation; 
   a large bibliographic collaboration system seeded with Library of Congress data; 
   a Laboratory Information Management System for disease diagnosis which 
-    captured, processed, summarized, categorized, presented and reported
-    on disparate scientific data streams; 
+    captured, processed and reported on disparate scientific data streams; 
   numerous B2B and B2C e-commerce technologies and systems 
     (handling both digital and tangible goods), 
   and many other projects involving sophisticated data-sets and processing. 
@@ -95,42 +95,41 @@ $\bullet$ Identity Management
 \end{ncolumn}
 
 \section{Languages, Formats, APIs and DTDs:}
-\begin{ncolumn}{5}
-$\bullet$  Python
- &$\bullet$ Javascript
- &$\bullet$ ObjC
- &$\bullet$ Postscript 
- &$\bullet$ SQL\\
-
-$\bullet$ Bash
- &$\bullet$ Java
- &$\bullet$ Scheme
- &$\bullet$ Smalltalk
- &$\bullet$ Perl\\
-
-$\bullet$ Erlang
- &$\bullet$ C 
- &$\bullet$ RPG/400 
- &$\bullet$ AWK 
- &$\bullet$ LISP\\
-
-$\bullet$ \LaTeX
+\begin{ncolumn}{6}
+$\bullet$ Python
+ &$\bullet$ Bash
+ &$\bullet$ C
  &$\bullet$ HTML5
- &$\bullet$ SGML
- &$\bullet$ XML
- &$\bullet$ DocBook\\
+ &$\bullet$ DocBook
+ &$\bullet$ TMAPI\\
 
-$\bullet$ SVG
- &$\bullet$ CSS 
- &$\bullet$ CL 
- &$\bullet$ PAL
+$\bullet$ Javascript
+ &$\bullet$ Java
+ &$\bullet$ Perl
+ &$\bullet$ CSS
+ &$\bullet$ SGML
+ &$\bullet$ Mappa\\
+
+$\bullet$ ObjC
+ &$\bullet$ Scheme
+ &$\bullet$ AWK
+ &$\bullet$ SVG
+ &$\bullet$ \LaTeX
  &$\bullet$ OWL\\
 
-$\bullet$ TMAPI
- &$\bullet$ Mappa
+$\bullet$ Postscript
+ &$\bullet$ Smalltalk
+ &$\bullet$ LISP
  &$\bullet$ PhoneGap
- &$\bullet$ VRML
- &$\bullet$ RenderMan\\
+ &$\bullet$ CL
+ &$\bullet$ OKBC\\
+
+$\bullet$ SQL
+ &$\bullet$ Erlang
+ &$\bullet$ RPG/400
+ &$\bullet$ XML
+ &$\bullet$ PAL
+ &$\bullet$ VRML\\
 
 \end{ncolumn}
 
@@ -205,14 +204,26 @@ $\bullet$ GIMP
 
 
 \title{ CTO }
-\location{ Saltspring Island, BC and Edmonton, AB}
+\location{ Saltspring Island \& Edmonton}
 \employer{Semandra, Inc.}
 \dates{2011 to Present}
 \begin{position}
 Semandra was founded to marry the latest semantic technologies 
 with the best information and visual designs to facilitate 
 discourse concerning the 'wicked problems' needing our joint attention.
+\end{position}
 
+
+\title{ Software Architect }
+\location{ Saltspring Island \& Edmonton}
+\employer{Cloudscape Creative}
+\dates{2011 to Present}
+\begin{position}
+Cloudscape Creative Solutions provides full-service front-to-backend
+website development specializing in graphics-intensive designs with
+multimedia integration, database-driven backends with complex
+programming requirements, and content-rich user-maintainable CMS
+sites.
 
 \begin{itemize}
   \item CinemAdmin --- a web application for repertory theatre and film festival management.
@@ -227,26 +238,14 @@ discourse concerning the 'wicked problems' needing our joint attention.
 \dates{2002 to 2011}
 
 \begin{position}
-Shawn has been performing various contract programming and consulting jobs
-and working on a large open source project called Nooron.
+Smurp.com provided contract programming and consulting services with a focus
+on database-backed web sites and complex data processing operations.
 
 \begin{itemize}
-  \item Nooron --- Nooron aims to be an online digital ecosystem in
-    which knowledge, logic and presentation can all evolve under the
-    pressure of fine-grained, criterion-based collaborative filtering 
-    and be syndicated across a globe-spanning, self-organizing, 
-    peer to peer system of web servers and client machines.
-    Nooron is Free Software under the GPL.
-
-    It currently has applications supporting:
-       \begin{itemize}
-          \item project management
-	  \item pattern languages
-          \item blogging
-          \item FAQs
-       \end{itemize}
-     It automatically publishes knowledge contained in it and also
-     knowledge about itself in various textual and graphical forms:
+  \item Nooron --- an experimental knowledge publishing and collaboration
+    environment featuring knowledge-based web-apps supporting: 
+      project management, pattern languages, blogging and FAQs.
+     It published knowledge within and about itself in various textual and graphical forms:
        \begin{itemize}
           \item DocBook, Rich Text, SVG, GIF, JPG, PDF and Postscript
 	  \item UML diagrams
@@ -262,6 +261,10 @@ and working on a large open source project called Nooron.
   information sources, eventually including ontologies, relational databases,
   xml documents, and topic maps.  PyOKBC is Free Software under the LGPL.
 
+  \item PyRETS --- An implementation of the {Real Estate Transaction System}
+  to keep a database at the Vancouver Real Estate Board synchronized with 
+  the MLS.ca dataset.
+
   \item CatPub --- A database publishing technology consisting of a
   Postscript templating system over a relational database back-end.
   Suitable for automatically preparing complex, highly customized,
@@ -269,7 +272,7 @@ and working on a large open source project called Nooron.
   it is closed source software created under contract for a firm
   providing publishing services to the real estate industry.  
   It is producing on the order of 10 thousand unique catalog pages 
-  every day containing constantly changing data for all of the largest 
+  every day containing constantly changing data for the largest 
   real estate boards in Western Canada.
 
   \item TKQ2.0 --- A Django e-store system vending e-books for hundreds
@@ -278,9 +281,10 @@ and working on a large open source project called Nooron.
   ``digital drop shipping`` and more.
 
   \item ModelViz --- Added dynamic SVG-based touring facilities to this Django
- model entity-relationship visualizer.
+  model entity-relationship visualizer.
 
-  \item A Django-based lodgings database backing a web site, a printed directory and an associated advertising sales and layout system.
+  \item A Django-based lodgings database backing a web site, a printed 
+  directory and an associated advertising sales and layout system.
 
 \end{itemize}
 
@@ -289,7 +293,7 @@ and working on a large open source project called Nooron.
 
 
 
-\title{ Founder, Chairman and VP, Research \& Development }
+\title{ Founder, Chairman and VP, R\&D }
 \location{Edmonton, AB}
 \employer{Emergence by Design, Inc.}
 \dates{Oct 1995 to Jan 2003}
@@ -297,21 +301,21 @@ and working on a large open source project called Nooron.
 \begin{position}
   Shawn founded Emergence by Design along with four colleagues to pursue
   the development of The Idea Engine.  To fund the ongoing development of
-  'TIE', EbD essentially became a dot-com factory, providing consulting,
+  'TIE', EbD became a dot-com factory, providing consulting,
   development, hosting and ecommerce services to new dot-com ventures.
   Shawn was VP of R\&D, lead developer and chief architect of this 15-person
   organization, until selling his interest in 2003.
 
 \begin{itemize}
 
-\item TheIdeaEngine --- architect and lead developer of this R\&D project developing a distributed
-  knowledge representation system using Java (and JDBC), Perl (and DBI), Scheme, and various SQL backends.  
+\item TheIdeaEngine --- architect and lead developer of this R\&D project 
+  developing a distributed knowledge representation system using 
+  Java (and JDBC), Perl (and DBI), Scheme, and various SQL backends.  
   The effort included the
   implementation of the OKBC (Open Knowledge Base Connectivity)
   specification in Java and Perl,
   the authoring of a multithreaded knowledge server
   and the creation of many perl CGIs, Java Applets and Applications.
-  TheIdeaEngine effort has continued in its current incarnation: Nooron.
 
 \item GetCited.org --- chief architect and lead developer on
   this massive, highly abstracted academic bibliographic portal system featuring:
@@ -345,7 +349,7 @@ and working on a large open source project called Nooron.
       (depending on currency, card-type, availability, etc.)
     \end{itemize}
 
-\item LawOpinion.com --- architect and developer of the worlds
+\item Law Opinion --- architect and developer of the worlds
                         first E-Commerce facility for the provision of 
                         paid legal opinions.  
                         It included numerous encryption safeguards 
@@ -353,8 +357,7 @@ and working on a large open source project called Nooron.
                         system for letting people pick the nearest
                         lawyer with experience in the chosen area of
                         the law;  and a sophisticated, dynamic,
-                        system for questionaire processing.
-
+                        system for performing branching automated interviews.
 \item FindAMentor.com --- architect and lead developer of this system
                     for helping people find and interact with mentors in
 		    various areas of their lives; complete with anonymization and
@@ -375,9 +378,9 @@ and working on a large open source project called Nooron.
 Through this period Shawn acted as database designer for numerous projects including:
 \begin{itemize}
 \item the automated publication of the Edmonton Chamber of Commerce
-  yearly directory, with four different kinds of listing, including equivalents of white pages and yellow pages
-\item a complete publishing automation solution for a magazine publisher, with extensive features 
-for advertising sales management and ad layout automation
+  yearly directory including equivalents of white pages and yellow pages
+\item a complete publishing automation solution for a magazine publisher, 
+  with extensive features for advertising sales management and ad layout automation
 \item a calendar design automation system
 
 
@@ -437,7 +440,6 @@ with the Gov't of Alberta.
 	track the features, locations, prices and owners of 
 	available commercial real estate to facilitate showing to clients
 \end{itemize}
-% Sapient Systems was folded when Emergence by Design was founded.
 \end{position}
 
 
@@ -446,9 +448,9 @@ with the Gov't of Alberta.
 \employer{TechnoWatch Society}
 \dates{1990 to 1992}
 \begin{position}
-Founded and managed this non-profit think tank, research and educational organization, put on
- presentations, guided staff conducting a scientific literature research project,
-and handled all financial \& administrative work.
+Founded and managed this non-profit think tank, research and educational 
+organization, put on presentations, guided staff conducting a scientific 
+literature research project, and handled all financial \& administrative work.
 \end{position}
 
 
@@ -488,8 +490,11 @@ Programming, Consulting and Training projects including:
 \location{ Silicon Valley }
 \dates{1990 to present}
 \begin{position}
-% Pursuaded that close interaction with peers is the best way to stay current in my %cross disciplinary focus on the use of collaboration technology
-At least twice a year over the last twenty years, Shawn has participated in diverse cutting-edge professional and scientific gatherings  -- and conducted personal interviews with thought leaders -- in nanotechnology, artificial intelligence, science and public policy, biotechnology, quantified self, semantic web, open source software and singularity studies.
+At least twice a year over the last twenty years, Shawn has participated
+in diverse cutting-edge professional and scientific gatherings -- 
+and conducted personal interviews with thought leaders -- in nanotechnology, 
+artificial intelligence, science and public policy, biotechnology, 
+quantified self, semantic web, open source software and singularity studies.
 \end{position}
 
 
@@ -534,7 +539,6 @@ At least twice a year over the last twenty years, Shawn has participated in dive
 % semi-professional theatrical production of 
 % Bertolt Brecht's {\it Mother Courage}.
 % \end{position}
-
 
 
 % \title{ Samual Hearne Secondary School}
