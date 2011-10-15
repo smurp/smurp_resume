@@ -1,6 +1,5 @@
 #!/usr/bin/python
 
-
 """
 Produce output like the following from nested lists of data.
 Permit pivoting.
@@ -56,8 +55,8 @@ Python,  Javascript, ObjC, Postscript, SQL
 Bash,  Java, Scheme,  Smalltalk, Erlang
 C, Perl, AWK, LISP, RPG/400
 HTML5, CSS, SVG, PhoneGap, XML
-DocBook, SGML, \LaTeX, CL, PAL
-TMAPI, Mappa, OWL, OKBC, VRML
+DocBook, SGML, \LaTeX, CL, Node.js
+TMAPI, Mappa, OWL, OKBC, WebMachine
 """
 
 def read_em(things):
@@ -115,8 +114,6 @@ def pivot(matrix,noop = False):
 
 if __name__ == "__main__":
     them = read_em(things)
-    #print format_as_bullet_table(them)
-    #print "=" * 80
     import doctest
     doctest.testmod()
     print format_as_bullet_table(pivot(them,noop=True))
