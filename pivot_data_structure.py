@@ -51,11 +51,10 @@ cell_delim = "\n &"
 column_after = "\\\\\n\n"
 
 things = """
-Python,  Javascript, ObjC, Postscript, SQL
-Bash,  Java, Scheme,  Smalltalk, Erlang
-C, Perl, AWK, LISP, RPG/400
+Python,  Javascript, Coffeescript, ObjC, Postscript, SQL, Bash, Java
+Scheme,  Smalltalk, Erlang, C, Perl, AWK, LISP, RPG/400
 HTML5, CSS, SVG, PhoneGap, XML
-DocBook, SGML, \LaTeX, CL, Node.js
+DocBook, SGML, \LaTeX, CL, NodeJS
 TMAPI, Mappa, OWL, OKBC, WebMachine
 """
 
