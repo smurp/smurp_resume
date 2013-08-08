@@ -54,7 +54,7 @@ things = """
 Python,  Javascript, Coffeescript, Postscript, SQL, Bash, ObjC, Java
 Perl, AWK, Scheme,  Smalltalk, Erlang, C, LISP, RPG/400
 HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
-DocBook, SGML, \LaTeX, Markdown, VRML, RIB, MARC
+DocBook, SGML, \LaTeX, Markdown, VRML, RIB, MARC, Make
 TMAPI, Mappa, OWL, OKBC, LTM, CTM
 """
 
