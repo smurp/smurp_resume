@@ -19,7 +19,9 @@ pdf : ps
 print : ps
 	lpr -Plp0 smurp_resume.ps
 
+
 dvi : clean
+	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
 	latex smurp_resume.tex && touch dvi
 
 ps : dvi dvips

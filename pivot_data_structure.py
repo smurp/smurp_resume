@@ -51,11 +51,11 @@ cell_delim = "\n &"
 column_after = "\\\\\n\n"
 
 things = """
-Python,  Javascript, Coffeescript, ObjC, Postscript, SQL, Bash, Java
-Scheme,  Smalltalk, Erlang, C, Perl, AWK, LISP, RPG/400
-HTML5, CSS, SVG, PhoneGap, XML
-DocBook, SGML, \LaTeX, CL, NodeJS
-TMAPI, Mappa, OWL, OKBC, WebMachine
+Python,  Javascript, Coffeescript, Postscript, SQL, Bash, ObjC, Java
+Perl, AWK, Scheme,  Smalltalk, Erlang, C, LISP, RPG/400
+HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
+DocBook, SGML, \LaTeX, Markdown, VRML, RIB, MARC
+TMAPI, Mappa, OWL, OKBC, LTM, CTM
 """
 
 def read_em(things):
@@ -115,6 +115,6 @@ if __name__ == "__main__":
     them = read_em(things)
     import doctest
     doctest.testmod()
-    print format_as_bullet_table(pivot(them,noop=True))
-    print "=" * 80
+    #print format_as_bullet_table(pivot(them,noop=True))
+    #print "=" * 80
     print format_as_bullet_table(pivot(them))
