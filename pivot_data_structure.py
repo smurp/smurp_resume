@@ -51,12 +51,17 @@ cell_delim = "\n &"
 column_after = "\\\\\n\n"
 
 things = """
-Python,  Javascript, Coffeescript, Postscript, SQL, Bash, ObjC, Java
-Perl, AWK, Scheme,  Smalltalk, Erlang, C, LISP, RPG/400
+Python,  Javascript, Java, Coffeescript, Postscript, SQL, Bash, ObjC
+Scala, Perl, C, AWK, Scheme, Smalltalk, Erlang, LISP
 HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
-DocBook, SGML, \LaTeX, Markdown, VRML, RIB, MARC, Make
-TMAPI, Mappa, OWL, OKBC, LTM, CTM
+Angular, Selenium, DocBook, SGML, \LaTeX, Markdown, MARC, Make
+TMAPI, Mappa, OWL, OKBC, LTM, CTM, N3, TriG
 """
+
+old_things = """
+VRML, RIB, RPG/400
+"""
+
 
 def read_em(things):
     out = []
