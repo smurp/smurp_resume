@@ -1,13 +1,14 @@
 
-\documentstyle[margin,line]{res}
-
-%
-% Logos
-% =====
+\documentclass[line,margin]{res}
+\usepackage{verbatim}
+\topmargin=-0.5in % start text higher on the page
 
 \font\attand=cmr7
 %\font\MetafontLogoFont=logo10
 
+%
+% Logos
+% =====
 \def\PS{{\tt P\small OST\tt S\small CRIPT}}
 \def\ATT{{AT{\attand \&}T}}
 \def\MF{{METAFONT}}
@@ -17,17 +18,14 @@ S$-\TeX}}
 
 \begin{document}
 
-% the following attempt to adjust the itemseparation was not effective
-% \itemsep=1in
 
 \name{Shawn F. Murphy}
  \address{http://smurp.com\\ Edmonton \& Saltspring\\ 
-%(250) 653-9987\\ 
-(780) 903-2428\\
+ (780) 903-2428\\
   {\tt smurp@smurp.com}}
 
-
 \resumewidth=7in
+\textheight=10.2in
 \begin{resume}
 
 \begin{format}
@@ -49,6 +47,8 @@ collaborative, e-commerce and publishing systems.
 He is fluent in diverse programming languages, knowledge
 representation technologies, frameworks, visualization tools, RDBMSes,
 ORMs, APIs, standards, methodologies and architectural styles. 
+
+\begin{comment}
 Examples of his work include:  
   a vehicle fleet tracking system with RESTful API;
   multiple dynamic knowledge visualization systems;
@@ -62,18 +62,17 @@ Examples of his work include:
   numerous B2B and B2C e-commerce technologies and systems 
     (handling both digital and tangible goods);
   and many other projects involving sophisticated data-sets and processing. 
-Inspired by emergent phenomena and
-self-organizing systems, he is focused on exploiting knowledge
-representation, collaborative filtering, evolutionary pressure and
-mass customization strategies for building out a global-scale
+\end{comment}
+
+Inspired by emergent phenomena and self-organizing systems, he is focused 
+on exploiting knowledge representation, collaborative filtering, evolutionary
+pressure and mass customization strategies for building out a global-scale
 knowledge management eco-system wherein software, knowledge and presentation
-co-evolve under the pressure of human opinion --– in short, a framework for 
-thinking together better, so we can meet the challenges of our time.
+co-evolve under the pressure of human opinion --– in short, technologically 
+grounding our collective intelligence, so we can meet the challenges of our 
+time.
 
 \end{par}
-
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -83,12 +82,12 @@ $\bullet$ Knowledge Representation
  &$\bullet$ Semantic Web\\
 $\bullet$ Knowledge Publishing
  &$\bullet$ Collaborative Filtering\\
-$\bullet$ Open Source / Free Software
- &$\bullet$ Object Oriented Programming\\
+%$\bullet$ Extreme Programming
+% &$\bullet$ Relational Databases\\
 $\bullet$ Electronic Data Interchange
  &$\bullet$ E-Commerce\\
-$\bullet$ Extreme Programming
- &$\bullet$ Relational Databases\\
+$\bullet$ Open Source / Free Software
+ &$\bullet$ Object Oriented Programming\\
 $\bullet$ Test Driven Development
  &$\bullet$ Dynamic Graphics\\
 $\bullet$ Asynchronous Web Servers
@@ -162,9 +161,24 @@ $\bullet$ NodeJS
  &$\bullet$ BeanStream
  &$\bullet$ GraphViz
  &$\bullet$ \small{ElasticSearch}\\
-
-
 \end{ncolumn}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Industries:}
+\begin{ncolumn}{2}
+$\bullet$  Bibliographic Systems
+ &$\bullet$ Digital Humanities\\
+$\bullet$ B2B \& B2C E-Commerce
+ &$\bullet$ Database Publishing\\
+$\bullet$ Real Estate
+ &$\bullet$ Recruiting Systems\\
+$\bullet$ Fleet Tracking
+ &$\bullet$ Supply Chain Automation\\
+%$\bullet$ Laboratory Information Management
+% &$\bullet$ Educational Management\\
+\end{ncolumn}
+
 
 \pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -181,7 +195,7 @@ $\bullet$ NodeJS
 \title{ Fullstack Software Engineer }
 \location{ Orange County, California }
 \employer{ Connectifier }
-\dates{2013 to Present}
+\dates{2013 to 2014}
 \begin{position}
 Using Java, Scala, AngularJS, the Play Framework, MongoDB, Elastic Search and Selenium 
 as part of a startup team to build a category leading recruiting platform.
@@ -189,8 +203,8 @@ as part of a startup team to build a category leading recruiting platform.
 
 \title{ Architect \& Programmer }
 \employer{ The Orlando Project }
-\location {University of Alberta, McGill, University of Guelph}
-\dates{2013 to Present}
+\location {Universities of Alberta, Guelph \& McGill}
+\dates{2013 to 2014}
 \begin{position}
 Coding and architecting an animated highly interactive semantic visualization research platform using 
 D3, Canvas, RDF and NodeJS for a university consortium working in the digial humanities.  
@@ -202,7 +216,7 @@ large text corpus.
 \title{ CTO, Software Architect }
 \location{ Saltspring Island \& Edmonton}
 \employer{Semandra, Inc.}
-\dates{2011 to Present}
+\dates{2011 to 2014}
 \begin{position}
 Semandra provides full-service front-to-backend
 website development specializing in graphics-intensive designs with
@@ -247,11 +261,10 @@ on database-backed web sites and complex data processing operations.
   system of knowledge representation and abstraction.
   It was designed to provide a single consistent interface to diverse structured
   information sources, to include ontologies, relational databases,
-  xml documents, and topic maps.  PyOKBC was Free Software under the LGPL.
+  xml documents, and topic maps. % PyOKBC was Free Software under the LGPL.
 
   \item PyRETS --- An implementation of the \emph{Real Estate Transaction System}
-  to keep a database at the Vancouver Real Estate Board synchronized with 
-  the MLS.ca dataset.
+  for keeping the Vancouver Real Estate Board synchronized with MLS.ca
 
   \item CatPub --- A database publishing technology consisting of a
   Postscript templating system over a relational database back-end.
@@ -399,9 +412,8 @@ Laboratories Branch included duties such as:
 \item Strategic planning and technology assessment for the branch 
 \item Management of two programmers, the AS/400 administrator and a
 	 tech support person.
-\item Analysis of customizable accounting packages and specification 
-	of changes to the selected system. Selected and liaised with 
-	the firm contracted to perform the work.
+\item Specification of customizable accounting package and management of vendor 
+         compliance
 \item Developed software to track and order laboratory supplies.
 \end{itemize}
 \end{position}
@@ -445,16 +457,16 @@ literature research project, and handled all financial \& administrative work.
 \end{position}
 
 
-
 \title{ Partner }
 \dates{1989 to 1990}
 \employer{Real Time Solutions}
 \begin{position}
-Programming, Consulting and Training projects including:
-\begin{itemize}
-\item Programmed Hotel Guest Information System
-\item BBS \& Network for an International Development Organization
-\end{itemize}
+Various programming, consulting and training projects
+%including:
+% \begin{itemize}
+% \item Programmed Hotel Guest Information System
+% \item BBS \& Network for an International Development Organization
+% \end{itemize}
 
 \end{position}
 
@@ -549,15 +561,6 @@ Programming, Consulting and Training projects including:
  $\bullet$ Game Theory &$\bullet$ GroupWare &$\bullet$ ISO-9000      &$\bullet$ Markets \\
  $\bullet$ Nanotech    &$\bullet$ Noosphere &$\bullet$ Singularity   &$\bullet$ Wearables \\
  \end{ncolumn}
-
-% \section{Interests:}
-% \begin{ncolumn}{4}
-% $\bullet$ A-Life  &$\bullet$ Agorics  &$\bullet$ Autopoesis  &$\bullet$ Design Patterns  \\
-% $\bullet$ Emergence  &$\bullet$ Evolution  &$\bullet$ Extropy  &$\bullet$ GPL \\
-% $\bullet$ Game Theory  &$\bullet$ GroupWare  &$\bullet$ ISO-9000   &$\bullet$ Markets \\
-% $\bullet$ Nanotech  &$\bullet$ Noosphere  &$\bullet$ OOP   &$\bullet$ Wearables \\
-% \end{ncolumn}
-
 
 \end{resume}
 \end{document}
