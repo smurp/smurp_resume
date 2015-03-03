@@ -6,11 +6,9 @@ help :
 	echo "ps -- build a postscript file by running dvips on the dvi file";\
 	echo "dvi -- create a dvi file by running latex on the resume";\
 	echo "txt -- create a text-only version of the resume" ;\
+	echo "docx -- create a Word version of the resume WIP: misses company names" ;\
 	echo "print -- print the ps file";\
-	echo "acrobat -- view the pdf using acroread";\
 	echo "xdvi -- view the dvi using xdvi";\
-	echo "distillery -- view the watch directory";\
-	echo "fetch -- fetch the created pdf file from the Out directory" ;\
 	echo "";
 
 pdf : ps
@@ -18,7 +16,6 @@ pdf : ps
 
 print : ps
 	lpr -Plp0 smurp_resume.ps
-
 
 dvi : clean
 	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
@@ -37,20 +34,14 @@ txt : dvips
 gv :	ps
 	gv smurp_resume.ps
 
-distillery :
-	ls -alg /EbD/temp/convert_to_pdf/Out
-
-acrobat :
-	acroread /EbD/temp/convert_to_pdf/Out/smurp_resume.pdf
-
 xdvi : dvi
 	xdvi smurp_resume.dvi
 
 clean : 
 	rm -f dvi 
 
-fetch :
-	cp /EbD/temp/convert_to_pdf/Out/smurp_resume.pdf .
-
 backup :
 	cp ${files} /obster_home/smurp/Library/Resume/
+
+docx :
+	pandoc -s smurp_resume.tex -o smurp_resume.docx
