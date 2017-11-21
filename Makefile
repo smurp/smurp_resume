@@ -13,18 +13,21 @@ help :
 
 pdf : ps
 	ps2pdf smurp_resume.ps smurp_resume.pdf
+	ps2pdf smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.pdf
 
 print : ps
 	lpr -Plp0 smurp_resume.ps
 
 dvi : clean
 	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
+	latex smurp_resume_berlin_visa_2017.tex
 	latex smurp_resume.tex && touch dvi
 
 ps : dvi dvips
 
-dvips : 
+dvips :
 	dvips -o smurp_resume.ps smurp_resume.dvi
+	dvips -o smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.dvi
 
 test : dvips gv
 
@@ -37,11 +40,14 @@ gv :	ps
 xdvi : dvi
 	xdvi smurp_resume.dvi
 
-clean : 
-	rm -f dvi 
+clean :
+	rm -f dvi
 
 backup :
 	cp ${files} /obster_home/smurp/Library/Resume/
+
+push :
+	git push
 
 docx :
 	pandoc -s smurp_resume.tex -o smurp_resume.docx
