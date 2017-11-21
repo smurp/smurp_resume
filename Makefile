@@ -20,7 +20,7 @@ print : ps
 
 dvi : clean
 	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
-	latex smurp_resume_berlin_visa_2017.tex
+	latex smurp_resume_berlin_visa_2017.tex && touch dvi
 	latex smurp_resume.tex && touch dvi
 
 ps : dvi dvips
