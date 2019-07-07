@@ -1,0 +1,37 @@
+
+Shawn Murphy is a software architect, knowledge engineer, software
+developer, development team leader, programming coach and trainer.
+Working in government, industry and academia he has designed and built
+large data-driven scientific, bibliographic, medical, collaborative,
+e-commerce and publishing systems.
+
+Now, as founder of Nooron Collaboratory [ http://nooron.com ] he is
+developing general purpose ontologically-driven software to support
+collective cognitive workflows such as knowledge management; evidence
+capture; candidate comparison; criterion elicitation; worldivew
+articulation; sense-making; decision support; knowledge visualization;
+rapid, semantic application development and user-contributable
+everything.
+
+It is in this context that Shawn has been developing HuViz -- a scriptable,
+interactive semantic visualization, navigation and (soon) authoring
+component.  This work has been conducted in close cooperation with, and
+supported by, the Orlando Project [ http://www.artsrn.ualberta.ca/orlando/ ]
+and, more recently, the Canadian Writers Reseach Collaboratory [ https://cwrc.ca/ ]
+
+Shawn's mission is to ensure that our software tools for discovering,
+thinking, deciding and acting can co-evolve under the pressure of
+ever-improving best practices on the theory that this is the "level of
+thinking" required for us to meet the challenges of our time.
+
+
+----
+
+## Bone pile
+
+* skynet v startrek
+* democracy is not good at its job
+* tracking provenance is a prerequisite for tracking learning and debate
+* Databases store what we think we know but academics need to manage the
+  very process by which we establish that knowning -- through learning,
+  debate and the evaluation of evidence and opinion.
