@@ -1,9 +1,11 @@
+# DH2019
 
 Shawn Murphy is a software architect, knowledge engineer, software
-developer, development team leader, programming coach and trainer.
+developer, development team leader, programming coach, trainer and serial entrepreneur.
 Working in government, industry and academia he has designed and built
 large data-driven scientific, bibliographic, medical, collaborative,
-e-commerce and publishing systems.
+electronic commerce (ANSI X-12), legal, e-commerce, visualization
+and publishing systems.
 
 As founder of Nooron Collaboratory [ http://nooron.com ] he is
 developing general purpose ontologically-driven software to support
@@ -27,6 +29,37 @@ theory that this is the "level of thinking" required for us to meet
 the challenges of our time.  He is eager to meet others seeking to
 make academic collaboration web scalable.
 
+
+# ForeSight Fellowship 2019
+
+Shawn Murphy is a software architect, knowledge engineer, software
+developer, development team leader, programming coach and trainer.
+Working in government, industry and academia he has designed and built
+large data-driven scientific, bibliographic, medical, collaborative,
+electronic data interchange (ANSI X-12), legal, e-commerce and
+publishing systems.
+
+As founder of Nooron Collaboratory [ http://nooron.com ] he is
+developing general purpose ontologically-driven software to support
+collective cognitive workflows such as knowledge management; evidence
+capture; candidate comparison; criterion elicitation; worldivew
+articulation; sense-making; decision support; knowledge visualization;
+rapid, semantic application development and user-contributable
+everything.
+
+In this context Shawn has been developing HuViz -- a scriptable,
+interactive semantic visualization, navigation and (soon) authoring
+component.  The HuViz work has been conducted in close cooperation
+with, and supported by, the Orlando Project
+[http://www.artsrn.ualberta.ca/orlando/ ] and, more recently, the
+Canadian Writers Reseach Collaboratory [ https://cwrc.ca/ ]
+
+Shawn is working to ensure that our software tools for discovering,
+thinking, deciding and acting can co-evolve under the
+software-supported pressure of ever-improving best practices, on the
+theory that this is the "level of thinking" required for us to meet
+the challenges of our time.  He is eager to meet others seeking to
+make academic collaboration web scalable.
 
 ----
 
