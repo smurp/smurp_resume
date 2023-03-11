@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 """
 Produce output like the following from nested lists of data.
@@ -122,4 +122,4 @@ if __name__ == "__main__":
     doctest.testmod()
     #print format_as_bullet_table(pivot(them,noop=True))
     #print "=" * 80
-    print format_as_bullet_table(pivot(them))
+    print(format_as_bullet_table(pivot(them)))
