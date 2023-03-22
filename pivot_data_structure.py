@@ -52,14 +52,14 @@ column_after = "\\\\\n\n"
 
 things = """
 Python,  Javascript, Java, Coffeescript, Postscript, SQL, Bash, Perl
-Scala, ObjC, C, AWK, Scheme, Smalltalk, Erlang, LISP
+Scala, ObjC, Nim, C, AWK, Scheme, Smalltalk, LISP
 HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
-Angular, Selenium, DocBook, SGML, \LaTeX, Markdown, Make, MARC
+Angular, React, Selenium, DocBook, SGML, \LaTeX, Markdown, Make
 RDF*, OWL, OKBC, N3, TriG, TMAPI, CTM, LTM
 """
 
 old_things = """
-VRML, RIB, RPG/400, Mappa
+VRML, RIB, RPG/400, Mappa, MARC, Erlang
 """
 
 
