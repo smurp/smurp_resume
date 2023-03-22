@@ -51,15 +51,15 @@ cell_delim = "\n &"
 column_after = "\\\\\n\n"
 
 things = """
-Python,  Javascript, Java, Coffeescript, Postscript, SQL, Bash, ObjC
-Scala, Perl, C, AWK, Scheme, Smalltalk, Erlang, LISP
+Python,  Javascript, Java, Coffeescript, Postscript, SQL, Bash, Perl
+Scala, ObjC, C, AWK, Scheme, Smalltalk, Erlang, LISP
 HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
-Angular, Selenium, DocBook, SGML, \LaTeX, Markdown, MARC, Make
-TMAPI, Mappa, OWL, OKBC, LTM, CTM, N3, TriG
+Angular, Selenium, DocBook, SGML, \LaTeX, Markdown, Make, MARC
+RDF*, OWL, OKBC, N3, TriG, TMAPI, CTM, LTM
 """
 
 old_things = """
-VRML, RIB, RPG/400
+VRML, RIB, RPG/400, Mappa
 """
 
 
