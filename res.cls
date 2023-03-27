@@ -785,7 +785,7 @@
 \parskip \baselineskip
 \setcounter{secnumdepth}{0}
 \def\@listI{\leftmargin\leftmargini
-\topsep 0pt 
+\topsep 0pt
 \parskip 0pt
 \partopsep 2pt plus 2pt
 \parsep 2pt plus 2pt
