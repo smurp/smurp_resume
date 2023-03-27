@@ -64,7 +64,7 @@ column_after = "\\\\\n\n"
 things = """
 Python,  Javascript, Typescript, Coffeescript, Postscript, SQL, Bash, Perl
 Java, C, AWK, ObjC, Scheme, Smalltalk, LISP, Nim
-HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
+HTML5, CSS, SVG, XML, jQuery/UI, D3, $<${\\tt canvas}$>$, ${\\tt 2d/webgl}$
 Angular, React, Selenium, DocBook, SGML, \LaTeX, Markdown, Make
 RDF*, OWL, OKBC, N3, TriG, TMAPI, CTM, LTM
 """
