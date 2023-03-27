@@ -2,6 +2,7 @@ files=smurp_resume.tex smurp_resume.pdf smurp_resume.ps res.sty res-sample2.tex 
 
 help :
 	clear ;\
+	echo "all -- do the whole shebang" ;\
 	echo "pdf -- build the pdf file by placing a ps in the watched directory" ;\
 	echo "ps -- build a postscript file by running dvips on the dvi file";\
 	echo "dvi -- create a dvi file by running latex on the resume";\
@@ -15,6 +16,11 @@ help :
 LATEX_FILE = smurp_resume
 PDF_FILE = $(LATEX_FILE).pdf
 PS_FILE = $(LATEX_FILE).ps
+
+all : pdf docx html open
+
+open :
+	open ${PDF_FILE}
 
 pdf : ps
 	ps2pdf $(PS_FILE) $(PDF_FILE)
