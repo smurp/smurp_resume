@@ -775,7 +775,7 @@
 \topmargin 0pt
 \headheight 0pt
 \headsep 0pt
-\textheight 10.2in
+\textheight 10in
 \parindent 0pt
 \topmargin 0in
 \oddsidemargin 0pt
@@ -800,4 +800,3 @@
 \end{format}
 
 \let\section\@@section
-

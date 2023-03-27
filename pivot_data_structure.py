@@ -5,44 +5,55 @@ Produce output like the following from nested lists of data.
 Permit pivoting.
 
 \begin{ncolumn}{5}
-$\bullet$  Python
- &$\bullet$ Javascript
+$\bullet$ Python
+ &$\bullet$ Scala
+ &$\bullet$ HTML5
+ &$\bullet$ Angular
+ &$\bullet$ RDF*\\
+
+$\bullet$ Javascript
  &$\bullet$ ObjC
- &$\bullet$ Postscript 
- &$\bullet$ SQL\\
+ &$\bullet$ CSS
+ &$\bullet$ React
+ &$\bullet$ OWL\\
+
+$\bullet$ Java
+ &$\bullet$ Nim
+ &$\bullet$ SVG
+ &$\bullet$ Selenium
+ &$\bullet$ OKBC\\
+
+$\bullet$ Coffeescript
+ &$\bullet$ C
+ &$\bullet$ XML
+ &$\bullet$ DocBook
+ &$\bullet$ N3\\
+
+$\bullet$ Postscript
+ &$\bullet$ AWK
+ &$\bullet$ JSON
+ &$\bullet$ SGML
+ &$\bullet$ TriG\\
+
+$\bullet$ SQL
+ &$\bullet$ Scheme
+ &$\bullet$ jQuery/UI
+ &$\bullet$ \LaTeX
+ &$\bullet$ TMAPI\\
 
 $\bullet$ Bash
- &$\bullet$ Java
- &$\bullet$ Scheme
  &$\bullet$ Smalltalk
- &$\bullet$ Erlang\\
+ &$\bullet$ D3
+ &$\bullet$ Markdown
+ &$\bullet$ CTM\\
 
-$\bullet$ C
- &$\bullet$ Perl
- &$\bullet$ AWK 
+$\bullet$ Perl
  &$\bullet$ LISP
- &$\bullet$ RPG/400\\
+ &$\bullet$ $<${\tt canvas}$>$
+ &$\bullet$ Make
+ &$\bullet$ LTM\\
 
-$\bullet$ HTML5
- &$\bullet$ CSS
- &$\bullet$ SVG
- &$\bullet$ PhoneGap
- &$\bullet$ XML\\
-
-$\bullet$ DocBook
- &$\bullet$ SGML
- &$\bullet$ \LaTeX
- &$\bullet$ CL 
- &$\bullet$ PAL\\
-
-$\bullet$ TMAPI
- &$\bullet$ Mappa
- &$\bullet$ OWL
- &$\bullet$ OKBC
- &$\bullet$ VRML\\
-
-\end{ncolumn}
-"""
+\end{ncolumn}"""
 
 header = "\\begin{ncolumn}{%(num_col)s}\n"
 footer = "\\end{ncolumn}\n"
@@ -51,8 +62,8 @@ cell_delim = "\n &"
 column_after = "\\\\\n\n"
 
 things = """
-Python,  Javascript, Java, Coffeescript, Postscript, SQL, Bash, Perl
-Scala, ObjC, Nim, C, AWK, Scheme, Smalltalk, LISP
+Python,  Javascript, Typescript, Coffeescript, Postscript, SQL, Bash, Perl
+Java, C, AWK, ObjC, Scheme, Smalltalk, LISP, Nim
 HTML5, CSS, SVG, XML, JSON, jQuery/UI, D3, $<${\\tt canvas}$>$
 Angular, React, Selenium, DocBook, SGML, \LaTeX, Markdown, Make
 RDF*, OWL, OKBC, N3, TriG, TMAPI, CTM, LTM
