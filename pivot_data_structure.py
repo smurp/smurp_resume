@@ -66,7 +66,7 @@ Python,  Javascript, Typescript, Coffeescript, Postscript, SQL, Bash, Perl
 Java, C, AWK, ObjC, Scheme, Smalltalk, LISP, Nim
 HTML5, CSS, SVG, XML, jQuery/UI, D3, $<${\\tt canvas}$>$, ${\\tt 2d/webgl}$
 Angular, React, Selenium, DocBook, SGML, \LaTeX, Markdown, Make
-RDF*, OWL, OKBC, N3, TriG, TMAPI, CTM, LTM
+RDF*, OWL, SPARQL, N3, TriG, OKBC, TMAPI, CTM
 """
 
 old_things = """
