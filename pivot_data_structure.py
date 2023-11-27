@@ -48,7 +48,7 @@ $\bullet$ Bash
  &$\bullet$ CTM\\
 
 $\bullet$ Perl
- &$\bullet$ LISP
+ &$\bullet$ Rust
  &$\bullet$ $<${\tt canvas}$>$
  &$\bullet$ Make
  &$\bullet$ LTM\\
@@ -62,7 +62,7 @@ cell_delim = "\n &"
 column_after = "\\\\\n\n"
 
 things = """
-Python,  Javascript, Typescript, Coffeescript, Postscript, SQL, Bash, Perl
+Python,  Javascript, Typescript, Coffeescript, Postscript, SQL, Bash, Rust
 Java, C, AWK, ObjC, Scheme, Smalltalk, LISP, Nim
 HTML5, CSS, SVG, XML, jQuery/UI, D3, $<${\\tt canvas}$>$, ${\\tt 2d/webgl}$
 Angular, React, Selenium, DocBook, SGML, \LaTeX, Markdown, Make

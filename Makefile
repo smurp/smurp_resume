@@ -17,7 +17,7 @@ LATEX_FILE = smurp_resume
 PDF_FILE = $(LATEX_FILE).pdf
 PS_FILE = $(LATEX_FILE).ps
 
-all : pdf docx html open
+all : clean pdf docx html open
 
 open :
 	open ${PDF_FILE}
