@@ -1,4 +1,7 @@
-files=smurp_resume.tex smurp_resume.pdf smurp_resume.ps res.sty res-sample2.tex smurp_resume.html Makefile
+files=smurp_resume.tex smurp_cv.tex smurp_resume.pdf smurp_resume.ps res.sty res-sample2.tex smurp_resume.html Makefile
+
+# how the cropped and resized mugshot is made (using ImageMagick's convert syntax)
+#   convert -shave '12%' -resize '10%' smurp_nosmile_color.jpg mugshot.eps
 
 help :
 	clear ;\
@@ -13,21 +16,21 @@ help :
 	echo "xdvi -- view the dvi using xdvi";\
 	echo "";
 
-LATEX_FILE = smurp_resume
-PDF_FILE = $(LATEX_FILE).pdf
-PS_FILE = $(LATEX_FILE).ps
-LATEX_DENSE = smurp_resume_dense
-PDF_DENSE = $(LATEX_DENSE).pdf
-PS_DENSE = $(LATEX_DENSE).ps
+LATEX_RESUME = smurp_resume
+PDF_RESUME = $(LATEX_RESUME).pdf
+PS_RESUME = $(LATEX_RESUME).ps
+LATEX_CV = smurp_cv
+PDF_CV = $(LATEX_CV).pdf
+PS_CV = $(LATEX_CV).ps
 
 all : clean pdf docx html open
 
 open :
-	open ${PDF_FILE} ${PDF_DENSE}
+	open ${PDF_RESUME} ${PDF_CV}
 
 pdf : ps
-	ps2pdf $(PS_FILE) $(PDF_FILE)
-	ps2pdf $(PS_DENSE) $(PDF_DENSE)
+	ps2pdf $(PS_RESUME) $(PDF_RESUME)
+	ps2pdf $(PS_CV) $(PDF_CV)
 	ps2pdf smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.pdf
 
 ps : dvi dvips
@@ -39,20 +42,22 @@ dvi : clean
 	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
 	latex smurp_resume_berlin_visa_2017.tex && touch dvi
 	latex smurp_resume.tex && touch dvi
-	latex smurp_resume_dense.tex && touch dvi
+	latex smurp_cv.tex && touch dvi
 
 dvips :
 	dvips -o smurp_resume.ps smurp_resume.dvi
-	dvips -o smurp_resume_dense.ps smurp_resume_dense.dvi
+	dvips -o smurp_cv.ps smurp_cv.dvi
 	dvips -o smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.dvi
 
 test : dvips gv
 
 txt : dvips
 	ps2ascii smurp_resume.ps > smurp_resume.txt
+	ps2ascii smurp_cv.ps > smurp_cv.txt
 
 html : smurp_resume.tex
 	pandoc -s smurp_resume.tex -o smurp_resume.html
+	pandoc -s smurp_cv.tex -o smurp_cv.html
 
 gv :	ps
 	gv smurp_resume.ps
@@ -68,3 +73,4 @@ push :
 
 docx :
 	pandoc -s smurp_resume.tex -o smurp_resume.docx
+	pandoc -s smurp_cv.tex -o smurp_cv.docx
