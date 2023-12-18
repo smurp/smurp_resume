@@ -560,6 +560,7 @@
 \let\l@justify\raggedright
 \let\r@justify\raggedleft
 \let\c@justify\centering
+\let\lm@justify\raggedright
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

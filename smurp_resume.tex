@@ -3,7 +3,8 @@
 \usepackage{verbatim}
 \usepackage{hyperref}
 \usepackage{fancyhdr}
-\usepackage{graphicx}
+\usepackage{graphicx}  % includegraphics
+\usepackage{mathtools} % text
 \hypersetup{colorlinks=true,
   urlcolor=blue,
   pdfauthor={Shawn F. Murphy},
@@ -39,17 +40,24 @@ S$-\TeX}}
    \href{https://www.linkedin.com/in/smurp}{linkedin.com/in/smurp}\\
    % \href{tel:+1-650-503-4034}{+1-650-503-4034}\\
    \href{tel:+49.160.462.8556}{+49.160.462.8556}\\
-   {\tt \href{mailto:smurp@smurp.com}{smurp@smurp.com}}}
+   {\tt \href{mailto:sfm@smurp.com}{sfm@smurp.com}}}
 
-\resumewidth=7in
+\resumewidth=7.2in
 \sectionskip=.08in
 \begin{resume}
 
 \begin{format}
-\title{l}\employer{r}\\
-\dates{l}\location{r}\\
-\body\\
+\dates{lm}\title{c}\employer{r}\\
+% \dates{lm}\location{r}\\
+% \body
 \end{format}
+
+%\begin{format}
+%  \title{c}\\
+%  \employer{l}\location{c}\\
+%  \dates{r}\\
+%  \body\\
+%\end{format}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -105,7 +113,7 @@ Examples of his work include:
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Professional Specialties:}
 \begin{par}
-Knowledge Representation,
+Knowledge Representation \& Graphs,
 Semantic Web,
 Distributed Systems,
 Collaborative Filtering,
@@ -117,14 +125,15 @@ Functional,
 OOP,
 Cognitive Computing,
 Dynamic Graphics,
-Asynch,
+DevOps,
 Pattern Languages,
 Data-Context-Interaction,
 Browser Extensions,
 Identity Management,
 NoSQL,
 DevOps,
-FOSS
+FOSS,
+Computer Supported Collaborative Work
 \end{par}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -154,7 +163,7 @@ RBAC,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{\footnotesize{Upper Ontologies:}}
 \begin{par}
-  RDF*, OWL, OKBC, TMAPI, CycL, WordNet
+  RDF*, OWL, OKBC, TMAPI, CycL, WordNet, KQML, DAML
 \end{par}
 
 
@@ -165,12 +174,13 @@ RBAC,
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Systems:}
 \begin{par}
- Linux, MacOS, iOS, Android, Raspi, AS/400, NeXTstep, Windows, AppleII
+Linux MacOS iOS Android Squeak Minix AS/400 OS/2 NeXTstep Windows AppleII
 \end{par}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Industries:}
 \begin{par}
+Artificial Intelligence,
 Molecular Nanotechnology,
 Bioinformatics,
 Bibliographic Systems,
@@ -185,9 +195,7 @@ Laboratory Information Management,
 Learning Management
 \end{par}
 
-\pagebreak
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Experience:}
 
 % \title{ Programmer }
 % \location{ Edmonton, AB}
@@ -197,9 +205,10 @@ Learning Management
 % Developed software to track and order laboratory supplies.
 % \end{position}
 
+\section{Experience}
 \title{ Founder \& CEO }
 \location{ Edmonton, Saltspring, Berlin }
-\employer{ \href{https://nooron.com}{Nooron Collaboratory Inc / Nooron UG} }
+\employer{ \href{https://nooron.com}{Nooron Collaboratory Inc/UG} }
 \dates{2015 to present}
 \begin{position}
 Nooron is a long-term R\&D project in pursuit of exponentiating
@@ -241,7 +250,7 @@ specification and a novel semantic graph layout specification language
 ) to support visual exploration of a large text corpus.
 \end{position}
 
-\title{ Founder, CTO, Software Architect }
+\title{ Founder, CTO, Architect }
 \location{ Saltspring Island \& Edmonton}
 \employer{ \href{https://web.archive.org/web/20141009141222/http://semandra.com:80/}{Semandra, Inc.} }
 \dates{2011 to 2014}
@@ -326,10 +335,10 @@ on database-backed web sites and complex data processing operations.
 
 
 
-\title{ Founder, Chairman and VP, R\&D }
+\title{ Founder, Chair, VP R\&D }
 \location{Edmonton, AB}
-\employer{ \href{https://web.archive.org/web/20000824074057/http://emergence.com/}{Emergence by Design, Inc.} }
-\dates{Oct 1995 to Jan 2003}
+\employer{ \href{https://web.archive.org/web/20000824074057/http://emergence.com/}{Emergence by Design} }
+\dates{1995 to 2003}
 
 \begin{position}
   Shawn founded Emergence by Design along with four colleagues to pursue
@@ -471,7 +480,7 @@ Sapient Systems specialized in the creation of desktop database apps.
 \end{position}
 
 
-\title{ Executive Director }
+\title{ Founder \& Director }
 \location{ Edmonton, AB}
 \employer{TechnoWatch Society}
 \dates{1990 to 1992}
