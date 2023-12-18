@@ -16,14 +16,18 @@ help :
 LATEX_FILE = smurp_resume
 PDF_FILE = $(LATEX_FILE).pdf
 PS_FILE = $(LATEX_FILE).ps
+LATEX_DENSE = smurp_resume_dense
+PDF_DENSE = $(LATEX_DENSE).pdf
+PS_DENSE = $(LATEX_DENSE).ps
 
 all : clean pdf docx html open
 
 open :
-	open ${PDF_FILE}
+	open ${PDF_FILE} ${PDF_DENSE}
 
 pdf : ps
 	ps2pdf $(PS_FILE) $(PDF_FILE)
+	ps2pdf $(PS_DENSE) $(PDF_DENSE)
 	ps2pdf smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.pdf
 
 ps : dvi dvips
@@ -35,9 +39,11 @@ dvi : clean
 	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
 	latex smurp_resume_berlin_visa_2017.tex && touch dvi
 	latex smurp_resume.tex && touch dvi
+	latex smurp_resume_dense.tex && touch dvi
 
 dvips :
 	dvips -o smurp_resume.ps smurp_resume.dvi
+	dvips -o smurp_resume_dense.ps smurp_resume_dense.dvi
 	dvips -o smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.dvi
 
 test : dvips gv
