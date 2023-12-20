@@ -20,15 +20,7 @@
 \topmargin=-0.5in % start text higher on the page
 \font\attand=cmr7
 
-%
-% Logos
-% =====
-\def\PS{{\tt P\small OST\tt S\small CRIPT}}
-\def\ATT{{AT{\attand \&}T}}
-\def\MF{{METAFONT}}
-\def\Cplusplus{{\rm C\raise.5ex\hbox{\small ++}}}
-\def\AmSTeX{{$\cal A\kern-.1667em\lower.5ex\hbox{$\cal M$}\kern-.125em
-S$-\TeX}}
+\input{globals.tex}
 
 \begin{document}
 
@@ -57,7 +49,7 @@ S$-\TeX}}
 \section{Profile:
   \newline   \newline
   \includegraphics[width=1.1in]{smurp_smile_color.eps}
-  \footnotesize{\textit{see} \href{https://smurp.com/smurp_cv.pdf}{full CV}}
+  \footnotesize{\textit{see} \href{\cvUrl}{full CV}}
 }
 \input{section/profile.tex}
 
@@ -171,7 +163,7 @@ Built dynamic visualization / semantic collaboration tools for academia
 
 \input{jobs/semandra.tex}
 \begin{position}
-Built cognitive, semantic, fleet management \& e-commerce SAS
+Built cognitive, semantic, fleet management \& e-commerce SaaS
 \end{position}
 
 \input{jobs/smurp_com.tex}
@@ -181,7 +173,7 @@ Built cognitive, real estate, knowledge graph, collaboration \& publishing syste
 
 \input{jobs/emergence_com.tex}
 \begin{position}
-Led 15 staff building e-commerce, academic, real estate, recruiting, legal \& other SAS
+Led 15 staff building e-commerce, academic, real estate, recruiting, legal \& other SaaS
 \end{position}
 
 \input{jobs/sapient.tex}

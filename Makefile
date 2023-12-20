@@ -14,6 +14,7 @@ help :
 	echo "docx -- create a Word version of the resume WIP: misses company names" ;\
 	echo "print -- print the ps file";\
 	echo "xdvi -- view the dvi using xdvi";\
+        echo "publish -- deploy output to smurp.com";\
 	echo "";
 
 LATEX_RESUME = smurp_resume
@@ -74,3 +75,6 @@ push :
 docx :
 	pandoc -s smurp_resume.tex -o smurp_resume.docx
 	pandoc -s smurp_cv.tex -o smurp_cv.docx
+
+publish :
+	cp smurp_resume.pdf smurp_cv.pdf ../smurp_com/
