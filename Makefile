@@ -23,7 +23,7 @@ LATEX_CV = smurp_cv
 PDF_CV = $(LATEX_CV).pdf
 PS_CV = $(LATEX_CV).ps
 
-all : clean pdf docx html open
+all : clean pdf open
 
 open :
 	open ${PDF_RESUME} ${PDF_CV}
