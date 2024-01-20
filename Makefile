@@ -19,11 +19,12 @@ help :
 
 LATEX_RESUME = smurp_resume
 PDF_RESUME = $(LATEX_RESUME).pdf
+PDF_RESUME_PLAIN = $(LATEX_RESUME)_plain.pdf
 PS_RESUME = $(LATEX_RESUME).ps
 LATEX_CV = smurp_cv
 PDF_CV = $(LATEX_CV).pdf
+PDF_CV_PLAIN = $(LATEX_CV)_plain.pdf
 PS_CV = $(LATEX_CV).ps
-
 all : clean pdf open
 
 open :
@@ -39,6 +40,7 @@ ps : dvi dvips
 print : ps
 	lpr -Plp0 smurp_resume.ps
 
+# https://tex.stackexchange.com/questions/19182/how-to-influence-the-name-of-the-pdf-file-created-with-pdflatex-from-within-the
 dvi : clean
 	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
 	latex smurp_resume_berlin_visa_2017.tex && touch dvi
@@ -78,3 +80,14 @@ docx :
 
 publish :
 	cp smurp_resume.pdf smurp_cv.pdf ../smurp_com/
+	cd ../smurp_com/ && pwd
+	git commit  -m "update cv and resume" smurp_{cv,resume}.pdf
+	git push github
+
+watch :
+	while sleep 1; \
+          do [ smurp_resume.pdf -ot smurp_resume.tex ] || \
+             [ smurp_cv.pdf -ot smurp_cv.tex ] \
+                && make all ; done
+	# Something like the following would be preferred:
+	# while sleep 1 ; do find . -name \*.tex -newer \*.pdf  || make all; done

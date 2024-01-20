@@ -1,5 +1,17 @@
-\def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_cv.pdf}
-\def\resUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_resume.pdf}
+% Based on ideas from
+%   https://tex.stackexchange.com/questions/1492/
+%   https://stackoverflow.com/questions/2033844/
+\def\mugshot{smurp_smile_color.eps}
+
+\ifdefined\mugshot
+  \def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_cv.pdf}
+  \def\resUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_resume.pdf}
+  \def\maybemugshot{\includegraphics[width=1.1in]{\mugshot} \newline}
+\else
+  \def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_cv_nomug.pdf}
+  \def\resUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_resume_nomug.pdf}
+  \def\maybemugshot{}
+\fi
 
 %
 % Logos
