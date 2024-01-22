@@ -44,7 +44,7 @@ publish:
 	git push github
 
 watch:
-	while sleep 5; do make all ; done
+	while true; do make all ; sleep 10 ; done
 
 # PHONY targets
 .PHONY: all clean
