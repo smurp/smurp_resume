@@ -1,93 +1,50 @@
-files=smurp_resume.tex smurp_cv.tex smurp_resume.pdf smurp_resume.ps res.sty res-sample2.tex smurp_resume.html Makefile
-
-# how the cropped and resized mugshot is made (using ImageMagick's convert syntax)
-#   convert -shave '12%' -resize '10%' smurp_nosmile_color.jpg mugshot.eps
+# Makefile to build smurp_{cv,resume}{,_nomug}.pdf from .tex sources
 
 help :
 	clear ;\
-	echo "all -- do the whole shebang" ;\
-	echo "pdf -- build the pdf file by placing a ps in the watched directory" ;\
-	echo "ps -- build a postscript file by running dvips on the dvi file";\
-	echo "dvi -- create a dvi file by running latex on the resume";\
-	echo "txt -- create a text-only version of the resume" ;\
-	echo "html -- create an html version of the resume" ;\
-	echo "docx -- create a Word version of the resume WIP: misses company names" ;\
-	echo "print -- print the ps file";\
-	echo "xdvi -- view the dvi using xdvi";\
+	echo "all -- build if needed and open" ;\
+	echo "watch -- run 'make all' every 5 seconds" ;\
+	echo "push -- push to github" ;\
         echo "publish -- deploy output to smurp.com";\
 	echo "";
 
-LATEX_RESUME = smurp_resume
-PDF_RESUME = $(LATEX_RESUME).pdf
-PDF_RESUME_PLAIN = $(LATEX_RESUME)_plain.pdf
-PS_RESUME = $(LATEX_RESUME).ps
-LATEX_CV = smurp_cv
-PDF_CV = $(LATEX_CV).pdf
-PDF_CV_PLAIN = $(LATEX_CV)_plain.pdf
-PS_CV = $(LATEX_CV).ps
-all : clean pdf open
+# Define the .tex files
+TEX_FILES = smurp_cv.tex smurp_resume.tex
 
-open :
-	open ${PDF_RESUME} ${PDF_CV}
+# Define the .pdf files
+PDF_FILES = $(TEX_FILES:.tex=.pdf)
 
-pdf : ps
-	ps2pdf $(PS_RESUME) $(PDF_RESUME)
-	ps2pdf $(PS_CV) $(PDF_CV)
-	ps2pdf smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.pdf
+# Default target
+all: $(PDF_FILES)
 
-ps : dvi dvips
+langauges_formats_apis_and_dtds.tex : langauges_formats_apis_and_dtds.py
+	./langauges_formats_apis_and_dtds.py > langauges_formats_apis_and_dtds.tex
 
-print : ps
-	lpr -Plp0 smurp_resume.ps
+TEX_DEPS = section/*.tex globals.tex langauges_formats_apis_and_dtds.tex
 
-# https://tex.stackexchange.com/questions/19182/how-to-influence-the-name-of-the-pdf-file-created-with-pdflatex-from-within-the
-dvi : clean
-	./pivot_data_structure.py > langauges_formats_apis_and_dtds.tex
-	latex smurp_resume_berlin_visa_2017.tex && touch dvi
-	latex smurp_resume.tex && touch dvi
-	latex smurp_cv.tex && touch dvi
+# Rule to build a .pdf file from a .tex file
+%.pdf: %.tex $(TEX_DEPS)
+	pdflatex $<
+	open $@
 
-dvips :
-	dvips -o smurp_resume.ps smurp_resume.dvi
-	dvips -o smurp_cv.ps smurp_cv.dvi
-	dvips -o smurp_resume_berlin_visa_2017.ps smurp_resume_berlin_visa_2017.dvi
+# Clean target to remove generated files
+clean:
+	rm -f *.aux *.log *.out $(PDF_FILES)
 
-test : dvips gv
+open:
+	open $(PDF_FILES)
 
-txt : dvips
-	ps2ascii smurp_resume.ps > smurp_resume.txt
-	ps2ascii smurp_cv.ps > smurp_cv.txt
-
-html : smurp_resume.tex
-	pandoc -s smurp_resume.tex -o smurp_resume.html
-	pandoc -s smurp_cv.tex -o smurp_cv.html
-
-gv :	ps
-	gv smurp_resume.ps
-
-xdvi : dvi
-	xdvi smurp_resume.dvi
-
-clean :
-	rm -f dvi
-
-push :
+push:
 	git push
 
-docx :
-	pandoc -s smurp_resume.tex -o smurp_resume.docx
-	pandoc -s smurp_cv.tex -o smurp_cv.docx
-
-publish :
-	cp smurp_resume.pdf smurp_cv.pdf ../smurp_com/
+publish:
+	cp $(PDF_FILES) ../smurp_com/
 	cd ../smurp_com/ && pwd
-	git commit  -m "update cv and resume" smurp_{cv,resume}.pdf
+	git commit  -m "update cv and resume" $(PDF_FILES)
 	git push github
 
-watch :
-	while sleep 1; \
-          do [ smurp_resume.pdf -ot smurp_resume.tex ] || \
-             [ smurp_cv.pdf -ot smurp_cv.tex ] \
-                && make all ; done
-	# Something like the following would be preferred:
-	# while sleep 1 ; do find . -name \*.tex -newer \*.pdf  || make all; done
+watch:
+	while sleep 5; do make all ; done
+
+# PHONY targets
+.PHONY: all clean
