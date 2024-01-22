@@ -1,0 +1,22 @@
+\ifdefined\mugshot
+  % setting \def\mugshot{} before this (ie to empty string) turns off the mugshot
+  % setting \def\mugshot{some.eps} before this OVERIDES the mugshot
+\else
+  \def\mugshot{smurp_smile_color.eps}
+\fi
+
+\def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_cv.pdf}
+\def\resUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_resume.pdf}
+\def\EmptyMacro{}
+
+\ifdefined\mugshot
+  \ifx\mugshot\EmptyMacro % ie is empty
+    \def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_cv_nomug.pdf}
+    \def\resUrl{https://github.com/smurp/smurp_resume/raw/master/smurp_resume_nomug.pdf}
+    \def\maybemugshot{}
+  \else
+    \def\maybemugshot{\includegraphics[width=1.1in]{\mugshot} \newline}
+  \fi
+\else
+  \def\maybemugshot{mugshot is not defined}
+\fi

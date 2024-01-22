@@ -9,7 +9,7 @@ help :
 	echo "";
 
 # Define the .tex files
-TEX_FILES = smurp_cv.tex smurp_resume.tex
+TEX_FILES = smurp_cv.tex smurp_resume.tex smurp_resume_nomug.tex smurp_cv_nomug.tex
 
 # Define the .pdf files
 PDF_FILES = $(TEX_FILES:.tex=.pdf)
@@ -17,10 +17,10 @@ PDF_FILES = $(TEX_FILES:.tex=.pdf)
 # Default target
 all: $(PDF_FILES)
 
-langauges_formats_apis_and_dtds.tex : langauges_formats_apis_and_dtds.py
-	./langauges_formats_apis_and_dtds.py > langauges_formats_apis_and_dtds.tex
+languages.tex : languages.py
+	./languages.py > languages.tex
 
-TEX_DEPS = section/*.tex globals.tex langauges_formats_apis_and_dtds.tex
+TEX_DEPS = section/*.tex globals.tex mugshooter.tex languages.tex
 
 # Rule to build a .pdf file from a .tex file
 %.pdf: %.tex $(TEX_DEPS)
