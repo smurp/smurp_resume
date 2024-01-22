@@ -1,8 +1,9 @@
-\def\us_phone{\href{tel:+1.650.503.4034}{+1.650.503.4034}}
-\def\de_phone{\href{tel:+49.160.462.8556}{+49.160.462.8556}}
-\def\bin_phones{ \( \binom{\text{ \us_phone }}{\text{ \de_phone }} \) }
-\def\tab_phones{  \begin{tabular}{c} \us_phone \\ \de_phone \\ \end{tabular}  }
-\def\tabCvs{  \begin{tabular}{c} \href{https://www.linkedin.com/in/smurp}{linkedin.com/in/smurp} \\ \showLinkToResOrCv  \\ \end{tabular}  }
+\def\usPhone{\href{tel:+1.650.503.4034}{+1.650.503.4034}}
+\def\dePhone{\href{tel:+49.160.462.8556}{+49.160.462.8556}}
+\def\linkedIn{\href{https://www.linkedin.com/in/smurp}{linkedin.com/in/smurp}}
+\def\prettyResOrCv{\textit{or} \resOrCvLink \textit{ pdf} }
+\def\tabPhones{  \begin{tabular}{c} \usPhone \\ \dePhone \\ \end{tabular}  }
+\def\tabCvs{ \begin{tabular}{c} \linkedIn \\ \prettyResOrCv  \\ \end{tabular} }
 
 \address{
   \begin{tabular}{c|c|c|c|c}
@@ -10,6 +11,6 @@
     \href{https://smurp.com}{smurp.com} &
     \href{mailto:sfm@smurp.com}{sfm@smurp.com} &
     \tabCvs &
-    \tab_phones \\
+    \tabPhones \\
   \end{tabular}
 }
