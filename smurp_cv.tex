@@ -33,11 +33,14 @@
 \resumewidth=7in
 \begin{resume}
 
+\sectionskip=.1in
+
 \begin{format}
 \title{l}\employer{r}\\
 \dates{l}\location{r}\\
 \body\\
 \end{format}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Profile:
@@ -47,29 +50,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Professional Specialties:}
-\begin{ncolumn}{2}
-$\bullet$ Knowledge Representation / Graphs
- &$\bullet$ Semantic Web\\
-$\bullet$ Distributed Systems
- &$\bullet$ Collaborative Filtering\\
-$\bullet$ Extreme Programming / Agile
- &$\bullet$ Relational Databases\\
-$\bullet$ Electronic Data Interchange
- &$\bullet$ Object Relational Mapping\\
-$\bullet$ Functional Programming
- &$\bullet$ Object Oriented Programming\\
-$\bullet$ Cognitive Computing
- &$\bullet$ Dynamic Graphics\\
-%$\bullet$ Asynchronous Web Servers
-% &$\bullet$ Pattern Languages\\
-$\bullet$ Data, Context, Interaction
-  &$\bullet$ Browser Extensions\\
-%$\bullet$ Identity Management
-% &$\bullet$ NoSQL Datastores\\
-$\bullet$ DevOps
- &$\bullet$ Open Source / Free Software\\
-
-\end{ncolumn}
+\input{section/specialties.tex}
 
 \section{Languages, Formats, APIs and DTDs:}
 \input{languages.tex}
@@ -90,17 +71,7 @@ $\bullet$ DevOps
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Systems:}
-\begin{ncolumn}{6}
-  $\bullet$ Linux
- &$\bullet$ OS X
- &$\bullet$ iOS
- &$\bullet$ Android\\
-  $\bullet$ AS/400
- &$\bullet$ NeXTstep
-  &$\bullet$ Windows
-  &$\bullet$ AppleII\\
-\end{ncolumn}
-
+\input{section/systems.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Software:}
@@ -139,20 +110,13 @@ $\bullet$ NodeJS
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Industries:}
-\begin{ncolumn}{2}
-$\bullet$ Molecular Nanotechnology
- &$\bullet$ Bioinformatics\\
-$\bullet$ Bibliographic Systems
- &$\bullet$ Digital Humanities\\
-$\bullet$ B2B \& B2C E-Commerce
- &$\bullet$ Database Publishing\\
-$\bullet$ Real Estate
- &$\bullet$ Recruiting Systems\\
-$\bullet$ Fleet Automation \& Tracking
- &$\bullet$ Supply Chain Automation\\
-$\bullet$ Laboratory Information Management
- &$\bullet$ Learning Management\\
-\end{ncolumn}
+\input{section/industries.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{section/interests.tex}
+
+\section{Education}
+\input{section/education.tex}
 
 
 \pagebreak
@@ -435,9 +399,6 @@ Sapient Systems specialized in the creation of desktop database apps.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{edu/all.tex}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\input{section/interests.tex}
 
 \end{resume}
 \end{document}
