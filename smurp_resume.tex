@@ -17,7 +17,7 @@
 %%\fancyfoot{}
 %% \fancyfoot[L] {\thepage}
 
-\topmargin=-0.6in % start text higher on the page
+\topmargin=-0.8in % start text higher on the page
 \font\attand=cmr7
 
 \input{globals.tex}
@@ -29,12 +29,13 @@
 \name{Shawn F. Murphy}
 \input{section/address.tex}
 
+\resumewidth=7.2in
 \begin{resume}
 
 % \resumewidth=8in  % must adjust in res.cls
 \end{resume}
 
-\sectionskip=.03in
+\sectionskip=.02in
 
 \begin{format}
 \dates{lm}\title{c}\employer{r}\\
@@ -54,7 +55,6 @@
   \maybemugshot
 }
 \input{section/profile.tex}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Professional Specialties:}
@@ -150,20 +150,25 @@ Real Estate management
 
 \input{jobs/technowatch.tex}
 \begin{position}
-Led existential risk research \& think-tank addressing AI, Biotech \& Nanotech hazards
+  Led existential risk research \& think-tank addressing AI,
+  Biotech \& Nanotech hazards
+\end{position}
+
+\input{jobs/ecocity.tex}
+\begin{position}
+  Cofounded and codirected non-profit driving eco-design, education,
+  and urban reforms
 \end{position}
 
 \input{jobs/govt_alberta.tex}
 \begin{position}
-Led 4 staff building biomedical LIMS, inventory \& ordering;
-taught RDBMS skills
+  Led 4 staff building biomedical LIMS, inventory \& ordering; taught RDBMS skills
 \end{position}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{edu/all.tex}
 
 \section{Education}
-\input{section/education.tex}
+\small{ \input{section/education.tex} }
 
-\end{resume}
 \end{document}
