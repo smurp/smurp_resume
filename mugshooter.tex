@@ -5,14 +5,14 @@
   \def\mugshot{smurp_smile_color.eps}
 \fi
 
-\def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/\profileVersion_cv.pdf}
-\def\resUrl{https://github.com/smurp/smurp_resume/raw/master/\profileVersion_resume.pdf}
+\def\cvUrl{https://smurp.github.io/smurp_resume/\profileVersion_cv.pdf}
+\def\resUrl{https://smurp.github.io/smurp_resume/\profileVersion_resume.pdf}
 \def\EmptyMacro{}
 
 \ifdefined\mugshot
   \ifx\mugshot\EmptyMacro % ie is empty
-    \def\cvUrl{https://github.com/smurp/smurp_resume/raw/master/\profileVersion_cv_nomug.pdf}
-    \def\resUrl{https://github.com/smurp/smurp_resume/raw/master/\profileVersion_resume_nomug.pdf}
+    \def\cvUrl{https://smurp.github.io/smurp_resume/\profileVersion_cv_nomug.pdf}
+    \def\resUrl{https://smurp.github.io/smurp_resume/\profileVersion_resume_nomug.pdf}
     \def\maybemugshot{}
   \else
     \def\maybemugshot{\newline \newline \includegraphics[width=1.1in]{\mugshot} \newline}
