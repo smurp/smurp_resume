@@ -1,3 +1,19 @@
+% Default profileVersion if not set by driver file
+\ifdefined\profileVersion
+\else
+  \def\profileVersion{smurp}
+\fi
+
+% Helper to input section files with per-profile-version overrides.
+% If section/<profileVersion>/<name>.tex exists, use it; otherwise fall back to section/<name>.tex.
+\newcommand{\inputSection}[1]{%
+  \IfFileExists{section/\profileVersion/#1.tex}{%
+    \input{section/\profileVersion/#1.tex}%
+  }{%
+    \input{section/#1.tex}%
+  }%
+}
+
 % Logos
 % =====
 \def\PS{{\tt P\small OST\tt S\small CRIPT} }
