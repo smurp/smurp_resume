@@ -1,12 +1,27 @@
-Shawn Murphy has spent his professional life developing hypertext,
-relational, object oriented and knowledge-based systems for
-e-commerce, medical, bibliographic, visualization, and publishing
-automation on diverse platforms.
+Software architect and engineer with 30+ years building
+data-intensive, knowledge-driven systems — now focused on
+AI-integrated architectures where humans and LLMs collaborate through
+structured, visualized knowledge with provenance, rather than just
+chat.
 
-Inspired by emergent phenomena and self-organizing systems, he is
-focused on exploiting collaborative filtering, evolutionary pressure
-and mass customization strategies for building out a scalable
-knowledge management eco-system.
+I do hands-on AI engineering:
+orchestrating agentic workflows across complex codebases spanning web
+frontends, mobile apps (Capacitor), desktop apps (Electron), and a
+custom Linux distribution.  I build interfaces where humans interact
+with LLMs through exchange of knowledge graphs and dialog — not just
+prompt-and-response, but genuine collaborative reasoning.
 
-GreenCheck token:
-VTJGc2RHVmtYMTk1NHRjUU1vUVE3OUxjYWI5NzhuOEUvSVdYNmx1MmZtWT0=
+Before the current AI wave, I was building the plumbing that makes LLM
+integration actually useful: graph databases, ontologies, distributed
+knowledge systems.  Before that: fullstack engineering at Thiel-funded
+Connectifier (acquired by LinkedIn); previously leading my own
+15-person "dot-com factory" shipping SaaS products across e-commerce,
+academic, legal, and recruiting domains; following a career as a
+government systems analyst leading biomedical software creation.
+
+I've been working seriously in the field of AI alignment since
+co-founding an existential risk think tank in 1990 — decades before
+the field had a name.
+
+Looking for Senior Engineer, AI Engineer, Staff Engineer, or Software
+Architect roles. Remote preferred.
