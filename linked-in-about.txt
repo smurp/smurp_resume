@@ -1,29 +1,13 @@
-Building realtime, multimedia collaborative cognition software so humankind can steer a path through the singularity... and address the challenges of our time.
+Senior Software Engineer | AI Systems, Knowledge Graphs, Visualization & Collaboration | Open to Opportunities | AI Alignment since 1990
 
-Software architect and engineer with 30+ years building
-data-intensive, knowledge-driven systems — now focused on
-AI-integrated architectures where humans and LLMs collaborate through
-structured, visualized knowledge with provenance, rather than just
-chat.
+---------
 
-I do hands-on AI engineering:
-orchestrating agentic workflows across complex codebases spanning web
-frontends, mobile apps (Capacitor), desktop apps (Electron), and a
-custom Linux distribution.  I build interfaces where humans interact
-with LLMs through exchange of knowledge graphs and dialog — not just
-prompt-and-response, but genuine collaborative reasoning.
+I build systems where humans and machines collaborate through knowledge graphs and visualizations, not just chat.  I'm a working engineer with 30+ years leading teams delivering semantic, OOP, relational and rule-driven systems.
 
-Before the current AI wave, I was building the plumbing that makes LLM
-integration actually useful: graph databases, ontologies, distributed
-knowledge systems.  Before that: fullstack engineering at Thiel-funded
-Connectifier (acquired by LinkedIn); previously leading my own
-15-person "dot-com factory" shipping SaaS products across e-commerce,
-academic, legal, and recruiting domains; following a career as a
-government systems analyst leading biomedical software creation.
+I do hands-on AI and collaboration engineering: building systems which support provenance and metacognition through knowledge graphs, dialogs and agents -- across web, mobile, desktop and a custom Linux distro.
 
-I've been working seriously in the field of AI alignment since
-co-founding an existential risk think tank in 1990 — decades before
-the field had a name.
+I've been doing AI alignment work since co-founding an existential risk think tank in 1990 — decades before the field had a name.
 
-Looking for Senior Engineer, AI Engineer, Staff Engineer, or Software
-Architect roles. Remote preferred.
+Before the current AI wave, I was building the plumbing that makes LLM integration actually useful: custom graph databases, ontologies and knowledge visualization systems.  Before that: fullstack engineering at Thiel-funded Connectifier (acquired by LinkedIn); previously leading my own 15-person "dot-com factory" shipping SaaS products across e-commerce, academic, legal, supply-chain, real-estate and recruiting domains; following a career as a government systems analyst leading development of a laboratory information management system.
+
+Seeking Senior Engineer, AI Engineer, Staff Engineer, Software Architect or Research roles. Remote preferred.
