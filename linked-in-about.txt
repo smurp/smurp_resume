@@ -1,3 +1,5 @@
+Building realtime, multimedia collaborative cognition software so humankind can steer a path through the singularity... and address the challenges of our time.
+
 Software architect and engineer with 30+ years building
 data-intensive, knowledge-driven systems — now focused on
 AI-integrated architectures where humans and LLMs collaborate through
